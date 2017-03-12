@@ -5,44 +5,48 @@ make-smaller-titles: true
 
 
 <div class="container-fluid index">
-    <div class="row">
-
-        <div class="col-md-12 main content-panel">
-
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
-            </div>
-
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
-
-          </div>
-          <div class="col-md-12 main content-panel">
-
-            <div class="articles">
-
-              <h2>Latest Articles</h2>
-
-              <ul>
-                  {% for post in site.posts limit: site.post_limit %}
-
-                      <li>
-                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                          <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                      </li>
-
-                  {% endfor %}
-                  <li>
-                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                  </li>
-              </ul>
-
-            </div>
-
-        </div>
-
+  <div class="row">
+    <div class="col-md-12 main content-panel">
+      <div class="gravatar">
+        <img src="{{ site.baseurl }}{{ site.title_image_path }}" class="img-thumbnail main-image" width="400" alt="{{ site.title }}" />
+      </div>
+      <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
+      <div class="author-text">
+        {{ site.title_description }}
+      </div>
     </div>
+    <div class="col-md-12 main content-panel">
+      <div class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="list-group">
+          <div class="list-group-item active">
+            <h4 class="list-group-item-heading">Where will it be?</h4>
+            <p class="list-group-item-text">
+              <strong>Rough & Ready Vineyard and Guesthouse</strong>
+              <br />
+              17860 Cattle Dr, Rough and Ready, CA 95975
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if site.posts > 0 %}
+      <div class="col-md-12 main content-panel">
+          <div class="articles">
+            <h2>Latest Updates</h2>
+            <ul>
+              {% for post in site.posts limit: site.post_limit %}
+              <li>
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
+              </li>
+              {% endfor %}
+              <li>
+                <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
+              </li>
+            </ul>
+          </div>
+      </div>
+    {% endif %}
+  </div>
 </div>

@@ -1,8 +1,6 @@
 ---
 ---
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700|Montserrat|Raleway');
 
 /* Colours */
 $twitter:        #6dabda;
@@ -27,6 +25,7 @@ $light:          #DFECE6;
 $white:          #FFFFFF;
 $dark-purple:    #300030;
 $medium-purple:  #480048;
+$light-purple:   #a28ad2;
 $regular-purple: #601848;
 $red:            #C04848;
 $orange:         #F07241;
@@ -44,11 +43,11 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
+	font-family: 'Raleway', sans-serif;
+	font-weight: lighter;
 	background-color: $dark;
 	color: $white;
-	font-size: 16px;
+	font-size: 1.4rem;
 	height: 100%;
 	width: 100%
 }
@@ -127,6 +126,10 @@ ul {
 	}
 }
 
+.main-image {
+	padding: 2px;
+}
+
 .content-panel {
 	background-color: $medium;
 	padding-top: 20px;
@@ -162,7 +165,7 @@ ul {
 			padding-left: 1rem;
 		}
 		.fa {
-			margin-right: 10px;
+			color: #c9c9c9;
 		}
 	}
 }
@@ -258,24 +261,18 @@ ul {
 		font-size: 22px;
 	}
 
-	.content-panel:nth-of-type(1) {
-		border-bottom: 10px solid $light-blue;
-	}
-
 	.author-header {
 		font-family: 'Montserrat', sans-serif;
 		color: $light-blue;
 		margin-top: 0px;
-		padding-top: 15px;
-		font-size: 30px;
+		padding-top: 4rem;
+		font-size: 4rem;
 
 		@media (min-width: $screen-sm-min) {
-			font-size: 52px;
 			margin-top: 0px;
 		}
 
 		@media (min-width: $screen-md-min) {
-			font-size: 60px;
 			margin-top: -20px;
 		}
 	}
@@ -345,6 +342,46 @@ ul {
 				}
 
 			}
+		}
+
+		a, a:active {
+			color: $white;
+			white-space: nowrap;
+		}
+
+		a:hover {
+			color: $light-blue;
+		}
+	}
+
+	.faq {
+
+
+		h2 {
+			margin-bottom: 30px;
+			color: $light-blue;
+			font-size: 26px;
+		}
+
+		.list-group-item {
+			background: none;
+			border: none;
+			border-bottom: 0.5rem solid $light-purple;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.list-group-item-heading {
+			color: #f8f8f8;
+			font-size: 1.8rem;
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+
+		.list-group-item-text {
+			color: #c9c9c9;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
 		}
 
 		a, a:active {
@@ -454,7 +491,6 @@ ul {
 	max-height: 100%;
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Montserrat', sans-serif;
 		margin-bottom: 10px;
 	}
 
@@ -626,7 +662,6 @@ ul {
 				}
 
 				:before {
-    			font-family: "Times New Roman";
 					color: $light-medium;
 			    content: "“";
 			    position: absolute;
@@ -724,7 +759,7 @@ ul {
 			text-align: center;
 
 			.fa-heart {
-				color: $red;
+				color: $light-purple;
 			}
 
 		}
@@ -826,11 +861,12 @@ ul {
 }
 
 .footer {
+	text-align: center;
 	width: 100%;
 	margin-left: 0%;
 
 	.fa-heart {
-		color: $red;
+		color: $light-purple;
 	}
 
 	@media (min-width: $screen-sm-min) {
