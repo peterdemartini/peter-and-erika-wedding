@@ -1,0 +1,22 @@
+title: "Peter and Erika's Wedding"
+description: "..."
+baseurl: ""
+url: "http://wedding.peteranderika.info"
+title_description: "Celebrate with us on July 29th 2017 in Rough and Ready, California"
+title_image: "http://r.ddmcdn.com/s_f/o_1/cx_633/cy_0/cw_1725/ch_1725/w_720/APL/uploads/2014/11/too-cute-doggone-it-video-playlist.jpg"
+github_repository: https://github.com/peterdemartini/peter-and-erika-wedding
+post_limit: 10
+
+# Footer
+footer_left: "<i class=\"fa fa-heart\"></i>"
+footer_right: ""
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+exclude: [vendor]
