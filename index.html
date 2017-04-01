@@ -3,32 +3,35 @@ layout: default
 make-smaller-titles: true
 ---
 
-
 <div class="container-fluid index">
   <div class="row">
     <div class="col-md-12 main content-panel">
       <div class="gravatar">
         <img src="{{ site.baseurl }}{{ site.title_image_path }}" class="img-thumbnail main-image" width="400" alt="{{ site.title }}" />
       </div>
-      <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-      <div class="author-text">
-        {{ site.title_description }}
+      <h1 class="header about-header" itemprop="headline">{{ site.data.about.title }}</h1>
+      <div class="about-text">
+        {{ site.data.about.description }}
       </div>
     </div>
     <div class="col-md-12 main content-panel">
       <div class="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="list-group">
-          <div class="list-group-item active">
-            <h4 class="list-group-item-heading">Where will it be?</h4>
+          <div class="list-group-item"></div>
+          {% for question in site.data.faq %}
+          <div class="list-group-item">
+            <h4 class="list-group-item-heading">{{question.title}}</h4>
             <p class="list-group-item-text">
-              <strong>Rough & Ready Vineyard and Guesthouse</strong>
-              <br />
-              17860 Cattle Dr, Rough and Ready, CA 95975
+              {{question.text}}
             </p>
           </div>
+          {% endfor %}
         </div>
       </div>
+    </div>
+    <div class="col-md-12 main content-panel">
+      <img src="{{ site.baseurl }}/images/ron-swanson-and-wife.jpg" class="img-responsive" />
     </div>
     {% if site.posts > 0 %}
       <div class="col-md-12 main content-panel">

@@ -2,20 +2,15 @@ title: "Peter and Erika's Wedding"
 description: "..."
 baseurl: ""
 url: "http://wedding.peteranderika.info"
-title_description: "Celebrate with us on July 29th 2017 in Rough and Ready, California"
-title_image_path: "/images/header-photo.jpg"
-github_repository: https://github.com/peterdemartini/peter-and-erika-wedding
-post_limit: 10
 
+title_image_path: "/images/header-photo.jpg"
+post_limit: 10
 # Footer
 footer_text: "with <i class=\"fa fa-heart\"></i> from Peter and Erika"
-
 # Build settings
 markdown: kramdown
-
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
 permalink: pretty
 exclude: [vendor]

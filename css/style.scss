@@ -261,7 +261,7 @@ ul {
 		font-size: 22px;
 	}
 
-	.author-header {
+	.about-header {
 		font-family: 'Montserrat', sans-serif;
 		color: $light-blue;
 		margin-top: 0px;
@@ -291,9 +291,10 @@ ul {
 		text-align: center;
 	}
 
-	.author-text {
+	.about-text {
 		text-align: center;
 		margin-top: 30px;
+		font-size: 1.9rem;
 
 		b {
 			font-size: 32px;
@@ -364,6 +365,7 @@ ul {
 		}
 
 		.list-group-item {
+			margin-top: 1rem;
 			background: none;
 			border: none;
 			border-bottom: 0.5rem solid $light-purple;
@@ -586,7 +588,7 @@ ul {
 			}
 		}
 
-		.author {
+		.about {
 			font-size: 20px;
 			text-align: center;
 			margin-bottom: 0px;
